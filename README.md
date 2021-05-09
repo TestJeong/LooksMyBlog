@@ -115,7 +115,7 @@ You can write...
 
 > With markdown syntax and some meta data
 
-#### Support script for creating new post
+## Support script for creating new post
 
 ![cli-tool-example](assets/cli-tool-example.gif)
 
@@ -222,11 +222,11 @@ This project exists thanks to all the people who contribute. [[Contribute](CONTR
 
 Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/gatsby-starter-bee/contribute)]
 
-#### Individuals
+## Individuals
 
 <a href="https://opencollective.com/gatsby-starter-bee"><img src="https://opencollective.com/gatsby-starter-bee/individuals.svg?width=890"></a>
 
-#### Organizations
+## Organizations
 
 Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/gatsby-starter-bee/contribute)]
 

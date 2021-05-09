@@ -2,8 +2,9 @@ module.exports = {
   title: `개발자로 살아보기`,
   description: `Blog posted about ....`,
   author: `YUN JAE J.`,
-  introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
-  siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
+  introduction: `Fall Seven times, Stand up Eight! 
+  I'm YunJae Jeonggg, My Development Blog 😀`,
+  siteUrl: `https://looksmyblog.netlify.app`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: ``, // Your GitHub account
@@ -11,7 +12,7 @@ module.exports = {
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
   },
-  icon: `content/assets/felog.png`, // Add your favicon
+  icon: `content/assets/tent.png`, // Add your favicon
   keywords: [`blog`],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.

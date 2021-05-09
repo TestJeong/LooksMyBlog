@@ -1,0 +1,12 @@
+.project-skill {
+  display: inline-block;
+  font-family: 'Noto Sans KR','Source Sans Pro', 'Fira Sans', sans-serif;
+  font-weight: 400;
+  padding: 2px 7px;
+  border-radius: 100px;
+  color: white;
+  border: solid 1px #D8E0E7;
+  background-color: #608fb7;
+  font-size: 14px;
+  margin: 0 8px 14px 0;
+}
