@@ -7,13 +7,13 @@ draft: false
 
 ## <span style="color : #184C88 ">자바스크립트의 이벤트에 관하여</span>
 
-
+***
 
 ![](./images/event.png)
 
 전체적인 이벤트의 흐름도이다 `td`를 클릭하면 어떻게 이벤트가 흐르는지 그림으로 표시된것이다. 빨간색 부분은 캡처링 초록색 부분은 버블링이며 아래에서 자세히 알아보도록 하자.
 
-
+***
 
 ### ✅ 이벤트 버블링이란?
 ![](./images/Bubbling.png)
@@ -28,7 +28,7 @@ draft: false
 
 위 코드와 같이 있으면 `EVENT-TEST`의 이벤트가 발생이 되면 상위 요소인 `event-click`까지 이벤트가 전파된다 즉 `EVENT-TEST`를 누르면 알림 창으로 <span style="border-bottom: 2px solid red">A ⇒ B ⇒ C</span> 순서대로 알림 창을 확인해볼 수 있다 이처럼 이벤트 버블링이란 이벤트가 발생하는 곳부터 상위 요소까지 전파가 되는 것이다.
 
-
+***
 
 ### ✅ 이벤트 캡처링이란?
 ![](./images/Capturing.png)
@@ -43,7 +43,7 @@ draft: false
 
 위 코드에서 상위 요소인 `event-click`에서 이벤트가 발생이 되면 제일 아래에 있는 하위 요소 `EVENT-TEST`까지 이벤트가 전파된다. 즉 버블링과 반대로 <span style="border-bottom: 2px solid red">C ⇒ B ⇒ A</span>로 전파가 된다.
 
-
+***
 
 ### ✅ event.stopPropagation() 과 event.preventDefault()의 차이점
 <br>
@@ -56,7 +56,7 @@ draft: false
 
 <span style="border-bottom: 2px solid red">두 가지 이벤트를 모두 사용하는 방법도 있으며 "return false"를 반환하면 된다.</span>
 
-
+***
 
 ### ✅ 이벤트 위임이란?
 
