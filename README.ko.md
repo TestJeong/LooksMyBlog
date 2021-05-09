@@ -128,7 +128,7 @@ npm run post
 
 ### 5. [Netlify](https://netlify.com)로 배포
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/JaeYeopHab/gatsby-starter-bee)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/TestJeong/LooksMyBlog)
 
 :bulb: github pages를 통해 배포하고 싶다면 아래 npm script를 `package.json`에 추가해주세요.
 
