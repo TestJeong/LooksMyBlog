@@ -31,12 +31,19 @@ GitHubTheme.overrideThemeStyles = () => {
       fontFamily: 'Catamaran',
     },
 
+    p: {
+      fontSize: '17px',
+      lineHeight: 1.8,
+      fontWeight: 400,
+    },
+
     ul: {
       marginBottom: '6px',
     },
 
     li: {
       marginBottom: '2px',
+      fontSize: '17px',
     },
   }
 }
