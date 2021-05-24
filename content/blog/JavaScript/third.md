@@ -15,7 +15,7 @@ draft: false
 
 ***
 
-### ✅ 이벤트 버블링이란?
+### ✅ &nbsp;이벤트 버블링이란?
 ![](./images/Bubbling.png)
 
 이벤트가 발생했을 때 하위(자식)에 있는 요소가 어떤 이벤트가 발생이 되면 <span style="border-bottom: 2px solid green">상위(부모) 요소들로 전달</span>하는 특성을 가지고 있다
@@ -30,7 +30,7 @@ draft: false
 
 ***
 
-### ✅ 이벤트 캡처링이란?
+### ✅ &nbsp;이벤트 캡처링이란?
 ![](./images/Capturing.png)
 
 버블링과 반대로 상위(부모)에서 이벤트가 발생이 되면 <span style="border-bottom: 2px solid green">하위(자식) 요소로 전파</span>가 되는 것이다
@@ -45,7 +45,7 @@ draft: false
 
 ***
 
-### ✅ event.stopPropagation() 과 event.preventDefault()의 차이점
+### ✅ &nbsp;event.stopPropagation() 과 event.preventDefault()의 차이점
 <br>
 
 **event.stopPropagation()**<br>
@@ -58,7 +58,7 @@ draft: false
 
 ***
 
-### ✅ 이벤트 위임이란?
+### ✅ &nbsp;이벤트 위임이란?
 
 이벤트 위임이란 쉽게 말해 동적으로 노드를 생성하고 삭제할 때 각 요소에 대한 이벤트를 추가하지 않고, <span style="border-bottom: 2px solid green">상위 요소에서 하위 요소의 이벤트들을 제어하는 방식</span>이다.
 
