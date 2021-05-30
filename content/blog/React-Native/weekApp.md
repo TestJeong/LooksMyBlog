@@ -68,7 +68,7 @@ draft: false
 
   또한 `Android`, `IOS` 의 날짜 형식이 달라 각각의 운영체제에 맞게 별도로 구현할 필요가 있었다. 안드로이드는 **"2021/05/18 11:00:00"** 와 같이 /와 날짜 다음 공백이 필요했고 IOS의 경우 **"2021-05-18T11:00:00"** 와 같이 작성해야 했다. 그래서 OS별 날짜를 처리하는 함수들을 따로 만들어 날짜 형식 입력이 필요할 때 활용하였다.
 
-  Bage 부분에 있어서 알림이 시간 순서에 맞게 count 할 수 있도록 구현하기 위해  `PushNotification.getScheduledLocalNotifications` 함수를 사용했다. 이것은 현재 등록된 알림 리스트를 확인 할 수 있는 함수로 새 알림을 등록 할 때마다 `sort` 함수를 통해 시간이 빠른 순으로 정렬하여 Bage Number를 재부여하므로 알림을 다시 보낼 수 있었다.
+  Bage 부분에 있어서 알림이 시간 순서에 맞게 count 할 수 있도록 구현하기 위해 **PushNotification.getScheduledLocalNotifications** 함수를 사용했다. 이것은 현재 등록된 알림 리스트를 확인 할 수 있는 함수로 새 알림을 등록 할 때마다 `sort` 함수를 통해 시간이 빠른 순으로 정렬하여 Bage Number를 재부여하므로 알림을 다시 보낼 수 있었다.
 
   ### 2. react-native-calendars
 
