@@ -2,8 +2,7 @@ module.exports = {
   title: `개발자로 살아보기`,
   description: `Blog posted about ....`,
   author: `YUN JAE J.`,
-  introduction: `Fall Seven times, Stand up Eight! 
-  I'm YunJae Jeonggg, My Development Blog 😀`,
+  introduction: `듣고, 읽고, 배운 것을 기록하며 성장하는 공간입니다 🍀`,
   siteUrl: `https://looksmyblog.netlify.app`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
