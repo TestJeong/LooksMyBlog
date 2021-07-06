@@ -30,10 +30,10 @@ function solution(array, commands) {
 
   for (let i = 0; i < commands.length; i++) {
     let arraylist = array
-      .slice(commands[i][0] - 1, commands[i][1])
+      .slice(commands[i][0] - 1, commands[i][1]) //for 문을 통해 중첩배열에 접근 합니다.
       .sort((a, b) => {
         return a - b;
-      });
+      }); // 오름차순으로 정렬합니다
 
     answer.push(arraylist[commands[i][2] - 1]);
   }

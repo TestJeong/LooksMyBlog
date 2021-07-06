@@ -25,12 +25,14 @@ function solution(participant, completion) {
 
   let num = participant.length;
 
+  // 완주하지 못한 선수와 완주한 선수를 정렬합니다
   participant.sort();
   completion.sort();
 
   for (let i = 0; i < num; i++) {
-    if (participant[i] !== completion[i]) {
-      return participant[i];
+    if (participant[i] !== completion[i]) { // 정렬한 후 for문을 통해 비교합니다
+
+      return participant[i]; // 같지 않은 선수가 있다면 출력합니다
     }
   }   
 }

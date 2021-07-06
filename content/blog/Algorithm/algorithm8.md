@@ -30,6 +30,9 @@ function solution(d, budget) {
 
   d.sort((a, b) => a - b);
 
+  //리듀서를 사용하여 오름차순으로 정렬된 d 배열을 차례로 
+  //더하면서 budget보다 적으면 지원이 가능하므로 
+  //삼항연산자를 사용하며 answer++ 또는 answer을 호출합니다
   d.reduce((acc, curr) => {
     acc + curr <= budget ? answer++ : answer;
     return acc + curr;

@@ -41,6 +41,9 @@ function solution(left, right) {
 ```
 
 ### 다른사람 풀이
+다른사람의 코드를 보는 중 짧고 간결하게 작성한 코드가 있어 추가하였습니다.<br>
+
+`Number.isInterger` 는 주어진 값이 정수인지 판단하는 메소드 이며 `Math.sqrt()`
 
 ```jsx
 
