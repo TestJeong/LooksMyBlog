@@ -18,6 +18,8 @@ draft: false
 
 ***
 
+### 나의 풀이
+
 ```jsx
 function solution(left, right) {
   var answer = 0;
@@ -43,7 +45,7 @@ function solution(left, right) {
 ### 다른사람 풀이
 다른사람의 코드를 보는 중 짧고 간결하게 작성한 코드가 있어 추가하였습니다.<br>
 
-`Number.isInterger` 는 주어진 값이 정수인지 판단하는 메소드 이며 `Math.sqrt()`
+`Number.isInterger` 는 주어진 값이 정수인지 판단하는 메소드 이며 `Math.sqrt()` 는 제곱근을 구하는 메소드 인데 제곱근이 정수이면 약수의 갯수가 홀수이고 정수가 아니면 짝수이다
 
 ```jsx
 
