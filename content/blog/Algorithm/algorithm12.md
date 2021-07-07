@@ -20,6 +20,13 @@ draft: false
 
 ### 나의 풀이
 
+- `Math.round()` : 정수의 소수점을 반올림 합니다
+- `Math.floor()` : 정수의 소수점을 내림 합니다
+- `Math.ceil()` : 정수의 소수점을 올림 합니다 <br><br>
+
+문자열 자르기 함수 중 `substr(시작인덱스 , 길이)` 을 사용하였습니다
+
+
 ```jsx
 function solution(s) {
   var answer = "";

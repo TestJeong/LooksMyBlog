@@ -25,6 +25,13 @@ draft: false
 
 ### 나의 풀이
 
+- 10진수를 2진수로 변경하기 위해 `toString(2)` 를 사용하였습니다
+- `padStart()` 는 현재 문자열의 시작을 다른 문자열로 채워, 주어진 길이를 만족하는 새로운 문자열을 반환합니다. 채워넣기는 대상 문자열의 시작(좌측)부터 적용됩니다. 아래 코드와 같이 사용 할 수 있습니다.
+```jsx
+const num = "5"
+num.padStart(2, "0") // 05  
+```
+
 ```jsx
 function solution(n, arr1, arr2) {
   var answer = [];
@@ -60,6 +67,8 @@ function solution(n, arr1, arr2) {
 ```
 
 ### 다른 사람 풀이
+
+비트 연산자를 사용하여 2진수로 변환 후 한번에 arr1, arr2번을 합쳐 정규표현식을 사용하여 # 과 공백을 추가하였습니다
 
 ```jsx
 var solution=(n,a,b)=>

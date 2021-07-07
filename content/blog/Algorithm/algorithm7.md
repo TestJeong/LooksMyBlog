@@ -25,6 +25,8 @@ draft: false
 
 ***
 
+### 나의 풀이
+
 ```jsx
 function solution(n, lost, reserve) {
   var answer = 0;
