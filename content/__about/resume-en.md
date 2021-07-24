@@ -21,7 +21,7 @@ a {
 
   .skill {
   display: inline-block;
-  font-family: 'Noto Sans KR','Source Sans Pro', 'Fira Sans', sans-serif;
+  font-family: 'ridi-batang','Source Sans Pro', 'Fira Sans', sans-serif;
   font-weight: 400;
   padding: 4px 14px;
   border-radius: 100px;
@@ -32,7 +32,7 @@ a {
 
   .project-skill {
   display: inline-block;
-  font-family: 'Noto Sans KR','Source Sans Pro', 'Fira Sans', sans-serif;
+  font-family: 'ridi-batang','Source Sans Pro', 'Fira Sans', sans-serif;
   font-weight: 400;
   padding: 2px 7px;
   border-radius: 100px;
@@ -52,7 +52,7 @@ a {
 
 
 .project_name {
-  font-family: 'Noto Sans KR','Source Sans Pro', 'Fira Sans', sans-serif;
+  font-family: 'ridi-batang','Source Sans Pro', 'Fira Sans', sans-serif;
   font-size: 20px;
   font-weight: 700;
   width: 35%;

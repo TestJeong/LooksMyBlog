@@ -7,10 +7,12 @@ GitHubTheme.overrideThemeStyles = () => {
       boxShadow: `none`,
       textDecoration: `none`,
       color: `#0687f0`,
+      fontFamily: 'ridi-batang',
     },
     'a.gatsby-resp-image-link': {
       boxShadow: `none`,
       textDecoration: `none`,
+      fontFamily: 'ridi-batang',
     },
 
     'a:hover': {
@@ -20,7 +22,7 @@ GitHubTheme.overrideThemeStyles = () => {
     h1: {
       fontWeight: 800,
       lineHeight: 1.2,
-      fontFamily: 'Catamaran',
+      fontFamily: 'ridi-batang',
     },
 
     h2: {
@@ -28,22 +30,29 @@ GitHubTheme.overrideThemeStyles = () => {
       lineHeight: 1.2,
       marginTop: '56px',
       marginBottom: '20px',
-      fontFamily: 'Catamaran',
+      fontFamily: 'ridi-batang',
+    },
+
+    h3: {
+      fontFamily: 'ridi-batang',
     },
 
     p: {
       fontSize: '17px',
       lineHeight: 1.8,
       fontWeight: 400,
+      fontFamily: 'ridi-batang',
     },
 
     ul: {
       marginBottom: '6px',
+      fontFamily: 'ridi-batang',
     },
 
     li: {
       marginBottom: '2px',
       fontSize: '17px',
+      fontFamily: 'ridi-batang',
     },
   }
 }

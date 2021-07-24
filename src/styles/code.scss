@@ -16,7 +16,6 @@
   padding-right: 1em;
   padding-left: 0.75em;
   border-left: 0.35em solid #0687f0;
-  
 }
 
 blockquote {
@@ -27,8 +26,8 @@ code[class*='language-'],
 pre[class*='language-'] {
   color: #e0e0e0;
   background: none;
-  font-family: 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono',
-    monospace;
+  font-family: 'ridi-batang', 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono',
+    'Ubuntu Mono', monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -36,7 +35,6 @@ pre[class*='language-'] {
   word-wrap: normal;
   line-height: 1.6;
   font-size: 15px;
-  
 
   -moz-tab-size: 2;
   -o-tab-size: 2;
@@ -70,18 +68,16 @@ pre[class*='language-'] {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-  font-size: 15px;
   text-align: center;
-  padding: 0.1em 0.3em;
-  border-radius: 0.2em;
-  border: 2px solid #b388ff;
+  padding: 0.11em 0.3em;
+  border-radius: 0.3em;
+  border: 1.2px solid #b388ff;
   white-space: normal;
   //background: $inline-dimmed-color;
-  background-color: white;
-  font-weight: 500;
+  background-color: #fffbfe;
+  font-weight: 400;
   color: #b399ff;
-  
-  
+
   //color: $inline-text-color;
 }
 

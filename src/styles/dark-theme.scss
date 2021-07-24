@@ -46,9 +46,11 @@ body.dark {
 
   .thumbnail {
     h3 {
+      font-family: 'ridi-batang';
       color: $dark-light-font-color;
     }
     p {
+      font-family: 'ridi-batang';
       color: $dark-middle-font-color;
     }
     &:hover {
