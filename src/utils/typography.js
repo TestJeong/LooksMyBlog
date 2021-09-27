@@ -38,9 +38,9 @@ GitHubTheme.overrideThemeStyles = () => {
     },
 
     p: {
-      fontSize: '17px',
+      fontSize: '15px',
       lineHeight: 1.8,
-      fontWeight: 400,
+      fontWeight: 200,
       fontFamily: 'ridi-batang',
     },
 
