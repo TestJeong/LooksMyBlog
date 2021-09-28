@@ -20,6 +20,20 @@ body.dark {
     }
   }
 
+  :not(pre) > code[class*='language-'] {
+    text-align: center;
+    padding: 0.11em 0.3em;
+    border-radius: 0.3em;
+    border: 1.2px solid #b388ff;
+    white-space: normal;
+    //background: $inline-dimmed-color;
+    background-color: #282c35;
+    font-weight: 200;
+    color: #b399ff;
+
+    //color: $inline-text-color;
+  }
+
   .category-container {
     border-top: 1px solid $dark-category-border-color;
     border-bottom: 1px solid $dark-category-border-color;

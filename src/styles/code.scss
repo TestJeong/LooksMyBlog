@@ -34,7 +34,7 @@ pre[class*='language-'] {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.6;
-  font-size: 13px;
+  font-size: 15px;
 
   -moz-tab-size: 2;
   -o-tab-size: 2;
@@ -71,12 +71,13 @@ pre[class*='language-'] {
   text-align: center;
   padding: 0.11em 0.3em;
   border-radius: 0.3em;
-  border: 1.2px solid #b388ff;
+  border: 1.5px solid #b388ff;
   white-space: normal;
   //background: $inline-dimmed-color;
   background-color: #fffbfe;
   font-weight: 200;
   color: #b399ff;
+  letter-spacing: 1px;
 
   //color: $inline-text-color;
 }
