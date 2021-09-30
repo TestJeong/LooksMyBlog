@@ -28,7 +28,7 @@ body.dark {
     white-space: normal;
     //background: $inline-dimmed-color;
     background-color: #282c35;
-    font-weight: 200;
+    font-weight: 400;
     color: #b399ff;
 
     //color: $inline-text-color;
@@ -60,11 +60,11 @@ body.dark {
 
   .thumbnail {
     h3 {
-      font-family: 'ridi-batang';
+      font-family: 'nexon-lv1-gothic';
       color: $dark-light-font-color;
     }
     p {
-      font-family: 'ridi-batang';
+      font-family: 'nexon-lv1-gothic';
       color: $dark-middle-font-color;
     }
     &:hover {
@@ -97,5 +97,8 @@ body.dark {
   }
   td {
     border-bottom: 1px solid #eee;
+  }
+  strong {
+    color: white;
   }
 }

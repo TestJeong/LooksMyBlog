@@ -34,7 +34,7 @@ pre[class*='language-'] {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 14px;
 
   -moz-tab-size: 2;
   -o-tab-size: 2;
@@ -68,14 +68,15 @@ pre[class*='language-'] {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
+  font-family: 'nexon-lv1-gothic';
   text-align: center;
-  padding: 0.11em 0.3em;
+  padding: 0.11em 0.2em;
   border-radius: 0.3em;
   border: 1.5px solid #b388ff;
   white-space: normal;
   //background: $inline-dimmed-color;
   background-color: #fffbfe;
-  font-weight: 200;
+  font-weight: 400;
   color: #b399ff;
   letter-spacing: 1px;
 

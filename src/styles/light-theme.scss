@@ -1,6 +1,7 @@
 body.light {
   background-color: $light-background-color;
   text-shadow: $light-text-shadow;
+  color: #4e5968;
 
   // home
   .home-header {
@@ -45,11 +46,13 @@ body.light {
 
   .thumbnail {
     h3 {
-      font-family: 'ridi-batang';
+      font-family: 'nexon-lv1-gothic';
       color: $dark-gray;
     }
     p {
-      font-family: 'ridi-batang';
+      font-family: 'nexon-lv1-gothic';
+      font-size: 16px;
+      font-weight: 300;
       color: $middle-gray;
     }
     &:hover {

@@ -8,7 +8,11 @@
     "url": "https://github.com/JaeYeopHan/gatsby-starter-bee/issues"
   },
   "dependencies": {
+    "@kfonts/bm-hanna-air": "^0.1.2",
+    "@kfonts/nexon-lv1-gothic": "^0.1.2",
+    "@kfonts/nexon-lv2-gothic": "^0.1.2",
     "@kfonts/ridi-batang": "^0.1.2",
+    "fontsource-noto-sans-kr": "^4.0.0",
     "gatsby": "^2.2.8",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-feed": "^2.1.0",

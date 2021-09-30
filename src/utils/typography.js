@@ -7,12 +7,12 @@ GitHubTheme.overrideThemeStyles = () => {
       boxShadow: `none`,
       textDecoration: `none`,
       color: `#0687f0`,
-      fontFamily: 'ridi-batang',
+      fontFamily: 'nexon-lv1-gothic',
     },
     'a.gatsby-resp-image-link': {
       boxShadow: `none`,
       textDecoration: `none`,
-      fontFamily: 'ridi-batang',
+      fontFamily: 'nexon-lv1-gothic',
     },
 
     'a:hover': {
@@ -20,39 +20,50 @@ GitHubTheme.overrideThemeStyles = () => {
     },
 
     h1: {
-      fontWeight: 800,
+      fontSize: '30px',
+      fontWeight: 600,
       lineHeight: 1.2,
-      fontFamily: 'ridi-batang',
+      fontFamily: 'nexon-lv1-gothic',
     },
 
     h2: {
-      fontWeight: 700,
+      fontWeight: 400,
       lineHeight: 1.2,
       marginTop: '56px',
       marginBottom: '20px',
-      fontFamily: 'ridi-batang',
+      fontFamily: 'nexon-lv1-gothic',
     },
 
     h3: {
-      fontFamily: 'ridi-batang',
+      fontSize: '20px',
+      fontWeight: 400,
+      fontFamily: 'nexon-lv1-gothic',
     },
 
     p: {
-      fontSize: '16px',
-      lineHeight: 1.8,
-      fontWeight: 200,
-      fontFamily: 'ridi-batang',
+      fontSize: '16.5px',
+      lineHeight: 1.7,
+      fontWeight: 300,
+      fontFamily: 'nexon-lv1-gothic',
     },
 
     ul: {
+      fontSize: '16.5px',
+      fontWeight: 300,
       marginBottom: '6px',
-      fontFamily: 'ridi-batang',
+      fontFamily: 'nexon-lv1-gothic',
     },
 
     li: {
+      fontWeight: 300,
       marginBottom: '2px',
-      fontSize: '17px',
-      fontFamily: 'ridi-batang',
+      fontSize: '16px',
+      fontFamily: 'nexon-lv1-gothic',
+    },
+
+    strong: {
+      fontWeight: 400,
+      color: '#333d4b',
     },
   }
 }

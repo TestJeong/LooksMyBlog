@@ -6,6 +6,7 @@ output:
   html_document:
     css: ttp.css
 ---
+
 <style>
   p {
   line-height: 2;
@@ -21,7 +22,7 @@ a {
 
   .skill {
   display: inline-block;
-  font-family: 'ridi-batang','Source Sans Pro', 'Fira Sans', sans-serif;
+  font-family: 'nexon-lv1-gothic','Source Sans Pro', 'Fira Sans', sans-serif;
   font-weight: 400;
   padding: 4px 14px;
   border-radius: 100px;
@@ -32,7 +33,7 @@ a {
 
   .project-skill {
   display: inline-block;
-  font-family: 'ridi-batang','Source Sans Pro', 'Fira Sans', sans-serif;
+  font-family: 'nexon-lv1-gothic','Source Sans Pro', 'Fira Sans', sans-serif;
   font-weight: 400;
   padding: 2px 7px;
   border-radius: 100px;
@@ -52,7 +53,7 @@ a {
 
 
 .project_name {
-  font-family: 'ridi-batang','Source Sans Pro', 'Fira Sans', sans-serif;
+  font-family: 'nexon-lv1-gothic','Source Sans Pro', 'Fira Sans', sans-serif;
   font-size: 20px;
   font-weight: 700;
   width: 35%;
@@ -72,7 +73,6 @@ a {
 ## Project ✨
 
 <ul class="project-container" style="list-style-type: none; margin: 0; padding: 0; margin-top: 20px">
-
 
   <li class="project-list" style>
     <p class="project_name">Yflix</p>
@@ -125,8 +125,6 @@ a {
   </li>
 </ul>
 
-
-
 ### ⌨️ Available My Skill
 
 <ul style="list-style-type: none; margin: 0; padding: 0; margin-top: 20px">
@@ -139,4 +137,4 @@ a {
   <li class="skill">GitHub</li>
 </ul>
 
-***
+---
