@@ -26,7 +26,7 @@ code[class*='language-'],
 pre[class*='language-'] {
   color: #e0e0e0;
   background: none;
-  font-family: 'ridi-batang', 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono',
+  font-family: 'd2coding', 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono',
     'Ubuntu Mono', monospace;
   text-align: left;
   white-space: pre;
@@ -59,11 +59,13 @@ pre[class*='language-'] {
   margin: 1.5em 0;
   overflow: auto;
   border-radius: 0.6em;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 5px;
 }
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: #212121;
+  background: #2e3440;
 }
 
 /* Inline code */
@@ -76,7 +78,7 @@ pre[class*='language-'] {
   white-space: normal;
   //background: $inline-dimmed-color;
   background-color: #fffbfe;
-  font-weight: 400;
+  font-weight: 500;
   color: #b399ff;
   letter-spacing: 1px;
 

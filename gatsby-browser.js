@@ -1,12 +1,10 @@
 // custom typefaces
 require('typeface-catamaran')
 require('@kfonts/ridi-batang')
-require('fontsource-noto-sans-kr/300.css')
-require('fontsource-noto-sans-kr/700.css')
-require('fontsource-noto-sans-kr/500.css')
 require('@kfonts/nexon-lv1-gothic')
 require('@kfonts/nexon-lv2-gothic')
 require('@kfonts/bm-hanna-air')
+require('@kfonts/d2coding')
 
 // polyfill
 require('intersection-observer')

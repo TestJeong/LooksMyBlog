@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@kfonts/bm-hanna-air": "^0.1.2",
+    "@kfonts/d2coding": "^0.1.2",
     "@kfonts/nexon-lv1-gothic": "^0.1.2",
     "@kfonts/nexon-lv2-gothic": "^0.1.2",
     "@kfonts/ridi-batang": "^0.1.2",
