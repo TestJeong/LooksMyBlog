@@ -29,8 +29,12 @@ body.light {
     .item {
       border: 1px solid $light-category-border-color;
       background-color: $light-category-item-color;
-      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+        rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+        rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+        rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+        rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
       a {
         color: $light-category-text-color;
       }
