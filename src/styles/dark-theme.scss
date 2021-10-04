@@ -3,6 +3,10 @@ body.dark {
   text-shadow: $dark-text-shadow;
   color: $dark-light-font-color;
 
+  @media (max-width: 700px) {
+    font-size: 15.5px;
+  }
+
   // home
   .home-header {
     color: $dark-light-font-color;

@@ -39,7 +39,7 @@ GitHubTheme.overrideThemeStyles = () => {
       fontWeight: 500,
       fontFamily: 'nexon-lv1-gothic',
     },
-
+    // 포스트 안 폰트
     p: {
       fontSize: '16.5px',
       lineHeight: 1.7,
