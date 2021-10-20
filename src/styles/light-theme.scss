@@ -7,6 +7,10 @@ body.light {
     font-size: 15.5px;
   }
 
+  @media only screen and (min-width: 884px) and (max-width: 767px) {
+    font-size: 14px;
+  }
+
   // home
   .home-header {
     color: $dark-gray;
