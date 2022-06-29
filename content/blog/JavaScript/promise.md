@@ -1,13 +1,74 @@
 ---
-title: '비동기 프로그래밍 - Promise(프로미스)'
+title: '비동기 프로그래밍 - 콜백함수(Callback), Promise(프로미스)'
 date: 2021-12-25 16:21:13
 category: 'JavaScript'
 draft: false
 ---
 
-1편에서는 싱글쓰레드인 자바스크립트가 어떻게 비동기 처리를 할 수 있는지 알아봤고 대표적인 비동기 처리인 콜백 함수에 대해서도 알아봤습니다. 하지만 콜백 함수는 가독성 문제와 에러 추적이 힘들다는 단점이 있어 ES6에서 새롭게 추가된 Promise에 대해 한번 알아보도록 하겠습니다.
+1편에서는 싱글쓰레드인 자바스크립트가 어떻게 비동기 처리를 할 수 있는지 알아봤으며 이번에는 비동기 처리 방법 중 콜백 함수와 Promise에 대해 알아보도록 하겠습니다.
 
-### **Promise란?**
+## 콜백 함수란?
+
+<span style="border-bottom: 2px solid #F08080">다른 함수에 매개변수로 넘기는 함수를 말하며 이벤트가 발생할 때 또는 특정 시점에 실행되는 함수라는 의미에서 콜백 함수라고 불립니다.</span>
+
+```jsx
+function print(callback) {
+  callback()
+}
+```
+
+위 코드에서 `print()` 함수는 매개변수로서 또 다른 함수(callback)를 받고 있으며 함수 내부에서 호출하고 있습니다. 여기서 매개변수로 전달된 함수를 콜백 함수라고 말하며 이 콜백 함수를 원하는 시점에 실행할 수도 있습니다.
+
+이제 이 콜백 함수를 통해 비동기 처리하는 방법을 알아보겠습니다.
+먼저 비동기 작업에서 콜백 함수를 사용하는 이유는 예를 들어 서버로부터 받아온 데이터를 추가적으로 연산처리를 한다고 가정했을 때 데이터를 받아온 후에 연산 작업을 해야 합니다.<span style="border-bottom: 2px solid #F08080"> 즉, A 동작이 완료된 후 B를 실행하여야 합니다. 이럴 때 콜백 함수를 이용하여 처리할 수 있습니다.</span>
+
+```jsx
+const printString = (string, callback) => {
+  setTimeout(() => {
+    console.log(string)
+    callback()
+  }, 1000)
+}
+
+const print = () => {
+  printString('A', () => {
+    console.log('B')
+  })
+}
+
+print()
+
+// A => printString의 첫번쨰 매개변수
+// B => 콜백 함수
+```
+
+1초 후 `printString()` 의 첫 번째 매개변수 A가 출력 된 후 콜백 함수가 실행되어 B가 출력된다.
+
+## 콜백지옥
+
+```jsx
+const print = () => {
+  printString('A', () => {
+    printString('B', () => {
+      printString('C', () => {
+        printString('D', () => {
+          printString('E', () => {
+            // 콜백지옥...
+          })
+        })
+      })
+    })
+  })
+}
+
+print()
+```
+
+위 코드처럼 <span style="border-bottom: 2px solid #F08080">콜백 함수를 계속 호출하는 상황을 콜백 지옥</span> 이라고 합니다. 단어 그대로 지옥이라고 표현할 만큼 콜백 함수의 중첩된 사용은 가독성과 유지 보수성을 떨어트리기 때문에 이러한 코딩 방식은 지양해야 합니다. 다음은 이런한 콜백 함수의 단점들을 보완해 준 Promise에 대해 알아보겠습니다.
+
+---
+
+## Promise란?
 
 비동기적으로 실행하는 <span style="border-bottom: 2px solid #F08080">작업의 결과(성공 또는 실패)를 나타내는 객체입니다.</span> new 연산자를 사용하여 Promise를 생성할 수 있으며 콜백 함수 보다 비동기 처리 시점을 명확하게 표현할 수 있고 또 연속된 비동기 처리 작업을 수정, 삭제, 추가하는 것이 더 편하고 가독성이 좋으며 비동기 작업 상태를 쉽게 확인할 수 있어 유지 보수성이 좋은 장점들이 있습니다.
 
@@ -156,7 +217,7 @@ promise()
 
 </br>
 
-### **프로미스 체이닝(Promise Chaining)으로 여러개 연결하기**
+## 프로미스 체이닝(Promise Chaining)으로 여러개 연결하기
 
 Promise는 콜백과 달리 `결과를 값으로 받아서 저장`할 수 있습니다. 그래서 Promise는 결과 그 자체를 값으로 받기 때문에, <span style="border-bottom: 2px solid #F08080">연속으로 실행하는 코드 즉 비동기 작업을 순차적으로 처리할 상황</span>에서 유용하게 사용 할 수 있습니다.
 
