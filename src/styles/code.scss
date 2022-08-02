@@ -70,6 +70,7 @@ pre[class*='language-'] {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
+  font-size: 13px;
   font-family: 'nexon-lv1-gothic';
   text-align: center;
   padding: 0.11em 0.2em;

@@ -1,7 +1,7 @@
 ---
 title: 'React-Native로 앱 출시! : 주간일정 TODO 앱 WEEK 🎯 '
 date: 2021-05-24 12:21:13
-category: 'React'
+category: 'Etc'
 draft: false
 ---
 

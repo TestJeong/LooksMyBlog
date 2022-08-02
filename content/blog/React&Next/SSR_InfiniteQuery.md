@@ -1,7 +1,7 @@
 ---
 title: 'NextJS 환경에서 SSR로 인피니티 스크롤 구현하는법 (feat. React Query)'
 date: 2022-06-15 16:21:13
-category: 'NextJS'
+category: 'React&Next'
 draft: false
 ---
 
