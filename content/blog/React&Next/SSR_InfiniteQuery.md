@@ -7,7 +7,7 @@ draft: false
 
 먼저 `SSR` 에서 react query를 사용하려면 두 가지 방법이 있는데 어떤 것이 있는지 살펴보겠습니다.
 
-## <span class ="hilight-container" style="background: #fbfea4">initialData 사용</span>
+## initialData 사용
 
 Next.js의 `getStaticProps` 또는 `getServerSideProps` 사용하여 가져온 데이터를 useQuery의 `initialData` 옵션에 전달하여 사용할 수 있습니다. 아래 코드는 `getStaticProps` 를 사용하여 `initialData` 를 만들어 useQuery에 전달하는 코드입니다.
 
@@ -31,7 +31,7 @@ function Posts(props) {
 - 컴포넌트 트리가 깊어질 경우, 관리가 어렵고 값을 넘겨주기도 어려워집니다.
 - 요청한 정보가 언제 서버에서 오는지 알 수 없습니다. 그러므로 요청한 정보를 다시 가져와야 할지 여부를 결정하는 건 페이지가 로드된 시간을 기준으로 하게 됩니다.
 
-## <span class ="hilight-container" style="background: #fbfea4">Hydration 사용</span>
+## Hydration 사용
 
 React Query는 Next.js의 서버에서 여러 쿼리를 미리 가져올 수 있는 prefetching 기능을 제공하는데 이 기능을 사용하여 미리 불러온 query를 queryClient에서 `dehydrating` 을 할 수 있게 됩니다.
 

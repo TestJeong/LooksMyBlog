@@ -1,11 +1,11 @@
 ---
 title: 'React-Native로 앱 출시! : 주간일정 TODO 앱 WEEK 🎯 '
 date: 2021-05-24 12:21:13
-category: 'Etc'
+category: 'React-Native'
 draft: false
 ---
 
-![](./images/splashimage.png)
+![](./images/splashimage1.png)
 
 ### <span style="color : #184C88 "># 간단한 앱 소개</span>
 
