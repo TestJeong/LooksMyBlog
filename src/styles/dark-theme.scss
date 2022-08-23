@@ -8,7 +8,7 @@ body.dark {
   }
 
   @media only screen and (min-width: 580px) and (max-width: 700px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   // home
@@ -30,7 +30,7 @@ body.dark {
 
   :not(pre) > code[class*='language-'] {
     text-align: center;
-    padding: 0.11em 0.3em;
+    padding: 0.13em 0.3em;
     border-radius: 0.3em;
     border: 1.2px solid #b388ff;
     white-space: normal;
