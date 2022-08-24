@@ -70,20 +70,26 @@ pre[class*='language-'] {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-  font-size: 12px;
+  // font-size: 14.5px;
+  // font-family: 'nexon-lv1-gothic';
+  // text-align: center;
+  // padding: px 3px;
+  // border-radius: 0.3em;
+  // //border: 1px solid #b388ff;
+  // white-space: normal;
+  // background-color: #fffbfe;
+  // font-weight: 'bold';
+  // color: #b399ff;
+  letter-spacing: 0.5px;
+  font-size: 14px;
   font-family: 'nexon-lv1-gothic';
   text-align: center;
-  padding: 0.13em 0.3em;
-  border-radius: 0.3em;
-  border: 1.2px solid #b388ff;
-  white-space: normal;
-  //background: $inline-dimmed-color;
+  border: 1px solid #b388ff;
   background-color: #fffbfe;
+  padding: 2px 3px 2px 3px;
+  border-radius: 0.3em;
   font-weight: 500;
   color: #b399ff;
-  letter-spacing: 1px;
-
-  //color: $inline-text-color;
 }
 
 .token.comment,
