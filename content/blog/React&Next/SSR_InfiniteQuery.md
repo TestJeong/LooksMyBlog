@@ -9,7 +9,7 @@ draft: false
 
 ## initialData 사용
 
-Next.js의 `getStaticProps` 또는 `getServerSideProps` 사용하여 가져온 데이터를 useQuery의 `initialData` 옵션에 전달하여 사용할 수 있습니다. 아래 코드는 `getStaticProps` 를 사용하여 `initialData` 를 만들어 useQuery에 전달하는 코드입니다.
+Next.js의 **getStaticProps** 또는 **getServerSideProps** 사용하여 가져온 데이터를 useQuery의 `initialData` 옵션에 전달하여 사용할 수 있습니다. 아래 코드는 **getStaticProps** 를 사용하여 `initialData` 를 만들어 useQuery에 전달하는 코드입니다.
 
 ```jsx
 export async function getStaticProps() {
@@ -35,10 +35,10 @@ function Posts(props) {
 
 React Query는 Next.js의 서버에서 여러 쿼리를 미리 가져올 수 있는 prefetching 기능을 제공하는데 이 기능을 사용하여 미리 불러온 query를 queryClient에서 `dehydrating` 을 할 수 있게 됩니다.
 
-<span class ="hilight-container" style="background: #ebb8c1">\*dehydrating란?</span> <span style="border-bottom: 2px solid #ebb8c1">캐시의 고정된 표현을 만드는 것을 말합니다. 이것은 나중에 React Query의 hydrated 방법으로 브라우저에서 hydrate 될 수 있다. 이 기능은 나중에 사용할 수 있도록 캐시를 저장하려는 경우(예: 로컬 스토리지에 저장하거나, 캐시를 서버에서 클라이언트로 보내는 경우) 유용합니다.</span>
+> **dehydrating란?** 캐시의 고정된 표현을 만드는 것을 말합니다. 이것은 나중에 React Query의 hydrated 방법으로 브라우저에서 hydrate 될 수 있다. 이 기능은 나중에 사용할 수 있도록 캐시를 저장하려는 경우(예: 로컬 스토리지에 저장하거나, 캐시를 서버에서 클라이언트로 보내는 경우) 유용합니다.
 
-<span class ="hilight-container" style="background: #ebb8c1">\*Hydrate란?</span> <span style="border-bottom: 2px solid #ebb8c1">Server Side 단에서 렌더링 된 정적 페이지와 번들링 된 js 파일(Webpack)을 클라이언트에게 보낸 뒤, 클라이언트 단에서 HTML 코드와 React인 js 코드를 서로 매칭 시키는 과정을 말합니다.</span>
-<br/><br/>
+> **Hydrate란?** Server Side 단에서 렌더링 된 정적 페이지와 번들링 된 js 파일(Webpack)을 클라이언트에게 보낸 뒤, 클라이언트 단에서 HTML 코드와 React인 js 코드를 서로 매칭 시키는 과정을 말합니다.
+> <br/><br/>
 
 ---
 
@@ -69,13 +69,13 @@ function Posts() {
 
 ---
 
-이제 Next.js의 `SSR` 환경에서 어떻게 `useInfinitQuery` 를 사용했는지 알아보겠습니다.
+이제 Next.js의 `SSR` 환경에서 어떻게 **useInfinitQuery** 를 사용했는지 알아보겠습니다.
 
 필요한 api를 호출한 후 받아온 데이터를 변경했는데 data는 result에 추가하고 nextPage (다음 페이지) 와 isLast(마지막 여부)를 추가로 만들어 작성하였습니다. 그 후 `prefetchInfiniteQuery` 를 이용하여 데이터를 불러옵니다
 
 여기서 props로 넘겨주는 dehydratedState의 dehydrate 부분에서 stringfy 후 parse를 하는 이유는 `useInfiniteQuery` 에 맨 처음 페이지에 해당하는 데이터의 `pageParam` 는 undefined로 설정되기 때문에 hydration 과정에서 직렬화가 되지 않아서 아래와 같이 적용해 주어야 합니다. <span style="color: #b11e31">(현재 react-query에서 가지고 있는 이슈입니다!)</span>
 
-<span class ="hilight-container" style="background: #ebb8c1">\*직렬화란?</span> <span style="border-bottom: 2px solid #ebb8c1">컴퓨터 메모리 상에 존재하는 객체(Object) -> 문자열(string)로 변환하는 것</span>
+> **직렬화란?** 컴퓨터 메모리 상에 존재하는 객체(Object) -> 문자열(string)로 변환하는 것
 
 ```jsx
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -103,7 +103,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 }
 ```
 
-아래 코드는 `SSR` 에서 prefetch를 통해 불러온 후 컴포넌트 안에서 `useQuery` 훅을 이용하여 키값을 통해 사용하는 코드입니다.
+아래 코드는 `SSR` 에서 prefetch를 통해 불러온 후 컴포넌트 안에서 **useQuery** 훅을 이용하여 키값을 통해 사용하는 코드입니다.
 
 ```jsx
 const FetchList = async ({pageParam = 1}) => {
@@ -146,7 +146,7 @@ useInfiniteQuery('projects', fetchProjects, {
 })
 ```
 
-그다음 `useInfiniteQuery` 에서 사용할 수 있는 함수가 여러 있는데 대표적인 함수들을 소개하겠습니다.
+그다음 **useInfiniteQuery** 에서 사용할 수 있는 함수가 여러 있는데 대표적인 함수들을 소개하겠습니다.
 
 - fetchNextPage : 다음 페이지를 불러오는 함수
 - fetchPreviousPage : 이전 페이지를 불러오는 함수
@@ -155,9 +155,11 @@ useInfiniteQuery('projects', fetchProjects, {
 - isFetchingNextPage: fetchNextPage를 통해 페칭이 되고 있는 상태인지 여부(boolen타입)
 - isFetchingPreviousPage: fetchPreviousPage 를 통해 페칭이 되고 있는 상태인지 여부(boolen타입)
 
-`useInfiniteQuery` 를 사용하여 어떻게 데이터를 불러오는지 알았다면 이제 어떻게 화면에서 무한 스크롤을 만들 수 있을지에 대해 알아보자 구현하는 방법은 여러 가지가 있겠지만 여기서는 `IntersectionObserver` 을 사용했고 `IntersectionObserver` 을 조금 더 편하게 사용할 수 있는 react-intersection-observer 라이브러리를 사용했다
+**useInfiniteQuery** 를 사용하여 어떻게 데이터를 불러오는지 알았다면 이제 어떻게 화면에서 무한 스크롤을 만들 수 있을지에 대해 알아보자 구현하는 방법은 여러 가지가 있겠지만 여기서는 `IntersectionObserver` 을 사용했고 `IntersectionObserver` 을 조금 더 편하게 사용할 수 있는 react-intersection-observer 라이브러리를 사용했다
 
-<span class ="hilight-container" style="background: #ebb8c1">\*IntersectionObserver란?</span> <span style="border-bottom: 2px solid #ebb8c1">대상이 화면에 보이면 callback 함수를 실행하여 원하는 동작을 수행할 수 있도록 타겟을 비동기적으로 감시하는 API입니다.</span>
+> **IntersectionObserver란?** 대상이 화면에 보이면 callback 함수를 실행하여 원하는 동작을 수행할 수 있도록 타겟을 비동기적으로 감시하는 API입니다.
+
+<br/>
 
 해당 페이지의 데이터 마지막에 button을 만들고 이 button에다가 ref를 걸어주면 해당 요소가 보이면 inView가 true로, 안 보이면 false로 자동으로 변경됩니다.
 

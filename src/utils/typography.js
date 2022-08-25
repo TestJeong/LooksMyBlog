@@ -20,10 +20,11 @@ GitHubTheme.overrideThemeStyles = () => {
     },
 
     h1: {
-      fontSize: '30px',
+      fontSize: '26px',
       fontWeight: 600,
       lineHeight: 1.2,
       fontFamily: 'nexon-lv1-gothic',
+      letterSpacing: '0.5px',
     },
 
     h2: {
@@ -32,6 +33,8 @@ GitHubTheme.overrideThemeStyles = () => {
       marginTop: '56px',
       marginBottom: '20px',
       fontFamily: 'nexon-lv1-gothic',
+      fontSize: '23px',
+      letterSpacing: '0.5px',
     },
 
     h3: {
@@ -62,7 +65,7 @@ GitHubTheme.overrideThemeStyles = () => {
     },
 
     strong: {
-      fontWeight: 500,
+      //fontWeight: 500,
       color: '#333d4b',
     },
   }

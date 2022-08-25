@@ -22,6 +22,10 @@ blockquote {
   color: $blockquote-text-color;
 }
 
+blockquote > p > strong {
+  color: #999;
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
   color: #e0e0e0;
@@ -88,7 +92,6 @@ pre[class*='language-'] {
   background-color: #fffbfe;
   padding: 2px 3px 2px 3px;
   border-radius: 0.3em;
-  font-weight: 500;
   color: #b399ff;
 }
 
