@@ -1,15 +1,17 @@
 ---
-title: '생성자 함수 와 생성자 함수를 통해 객체 생성'
+title: '❄️ 생성자 함수 와 생성자 함수를 통해 객체 생성'
 date: 2021-09-28 16:21:13
 category: 'JavaScript'
 draft: false
 ---
 
-<span class ="hilight-container" style="background: #fbfea4"><strong class="strong-container"> 이글을 보기 전에 this에 관한 이해가 필요합니다 this에 대해 모르시면 [여기](https://looksmyblog.netlify.app/JavaScript/this/) 글을 한번 보고 와주세요!</strong></span>
+<strong class="strong-container"> 이글을 보기 전에 this에 관한 이해가 필요합니다 this에 대해 모르시면 [여기](https://looksmyblog.netlify.app/JavaScript/this/) 글을 한번 보고 와주세요!</strong>
 
 객체 리터럴에 의한 객체 생성 방식은 가장 일반적이고 간단한 생성 방식이다 하지만 객체 리터럴 이외에도 다양한 방법으로 생성할 수 있는데 여기서는 생성자 함수를 통해 객체를 생성하는 방식을 알아보자
 
-생성자 함수란 new 연산자와 함께 호출하여 객체를 생성하는 함수를 말하며 생성자 함수에 의해 생성된 객체를 인스턴스라 한다
+> **생성자 함수란?** new 연산자와 함께 호출하여 객체를 생성하는 함수를 말하며 생성자 함수에 의해 생성된 객체를 인스턴스라 한다
+
+<br/>
 
 ```jsx
 // 빈 객체의 생성
@@ -76,85 +78,90 @@ console.log(circle1.getDiameter()) // 10
 console.log(circle2.getDiameter()) // 20
 ```
 
-생성자 함수의 인스턴스 생성 과정
+<br/>
+
+### **생성자 함수의 인스턴스 생성 과정**
 
 생성 과정은 크게 인스턴스를 생성하는 것과 생성된 인스턴스를 초기화 하는 것으로 나뉘어 진다 아래 코드를 보며 살펴보자
 
-1. 인스턴스 생성과 this 바인딩
+#### 1. 인스턴스 생성과 this 바인딩
 
-   ```jsx
-   function Circle(radius) {
-     console.log(this) // Circle {} 암묵적으로 인스턴스 생성!
+```jsx
+function Circle(radius) {
+  console.log(this) // Circle {} 암묵적으로 인스턴스 생성!
 
-     this.radius = radius
-     this.getDiameter = function() {
-       return 2 * this.radius
-     }
-   }
-   ```
+  this.radius = radius
+  this.getDiameter = function() {
+    return 2 * this.radius
+  }
+}
+```
 
-   암묵적으로 인스턴스가 생성되고 this에 바인딩된다. 생성자 함수에서의 this는 생성자 함수가 생성할 인스턴스를 가리킨다
+암묵적으로 인스턴스가 생성되고 this에 바인딩된다. 생성자 함수에서의 this는 생성자 함수가 생성할 인스턴스를 가리킨다
 
-   <span class="hilight-container" style="background: #fbfea4"> <u>바인딩이란?</u> 식별자와 값을 연결하는 과정</span>
+> **바인딩이란?** 식별자와 값을 연결하는 과정
 
-2. 인스턴스 초기화
+#### 2. 인스턴스 초기화
 
-   ```jsx
-   function Circle(radius) {
-     // 인스턴스 초기화
-     this.radius = radius
-     this.getDiameter = function() {
-       return 2 * this.radius
-     }
-   }
-   ```
+```jsx
+function Circle(radius) {
+  // 인스턴스 초기화
+  this.radius = radius
+  this.getDiameter = function() {
+    return 2 * this.radius
+  }
+}
+```
 
-   this에 바인딩되어 있는 인스턴스에 프로퍼티나 메서드를 추가하고 생서자 함수가 인수로 전달받은 초기값을 인스턴스 프로퍼티에 할당하여 초기화 또는 고정값을 할당한다
+this에 바인딩되어 있는 인스턴스에 프로퍼티나 메서드를 추가하고 생서자 함수가 인수로 전달받은 초기값을 인스턴스 프로퍼티에 할당하여 초기화 또는 고정값을 할당한다
 
-3. 인스턴스 반환
+#### 3. 인스턴스 반환
 
-   ```jsx
-   function Circle(radius) {
-     this.radius = radius
-     this.getDiameter = function() {
-       return 2 * this.radius
-     }
-     // 완성된 인스턴스가 바인딩된 this를 암묵적으로 반환이 됩니다
-   }
+```jsx
+function Circle(radius) {
+  this.radius = radius
+  this.getDiameter = function() {
+    return 2 * this.radius
+  }
+  // 완성된 인스턴스가 바인딩된 this를 암묵적으로 반환이 됩니다
+}
 
-   const circle = new Circle(1) // 인스턴스를 생성합니다
-   console.log(circle) // Circle { radius: 1, getDiameter: f}
-   ```
+const circle = new Circle(1) // 인스턴스를 생성합니다
+console.log(circle) // Circle { radius: 1, getDiameter: f}
+```
 
-   생성자 함수 내부에 모든 처리가 끝나면 완성된 인스턴스가 바인딩 된 this가 암묵적으로 반환이 됩니다 하지만 여기서 주의할 사항이 있는데 this가 아닌 다른 객체를 명시적으로 반환하면 return 문에 입력한 객체가 반환이 된다
+생성자 함수 내부에 모든 처리가 끝나면 완성된 인스턴스가 바인딩 된 this가 암묵적으로 반환이 됩니다 하지만 여기서 주의할 사항이 있는데 this가 아닌 다른 객체를 명시적으로 반환하면 return 문에 입력한 객체가 반환이 된다
 
-   ```jsx
-   function Circle(radius) {
-     this.radius = radius
-     this.getDiameter = function() {
-       return 2 * this.radius
-     }
-     return {} // return문을 통해 빈 객체({})을 반환
-   }
+```jsx
+function Circle(radius) {
+  this.radius = radius
+  this.getDiameter = function() {
+    return 2 * this.radius
+  }
+  return {} // return문을 통해 빈 객체({})을 반환
+}
 
-   const circle = new Circle(1)
-   console.log(circle) // {}
-   ```
+const circle = new Circle(1)
+console.log(circle) // {}
+```
 
-   하지만 명시적을 원시 값을 반화하면 원시 값 반환은 무시되고 암묵적으로 this가 반환된다
+하지만 명시적을 원시 값을 반화하면 원시 값 반환은 무시되고 암묵적으로 this가 반환된다
 
-   ```jsx
-   function Circle(radius) {
-     this.radius = radius
-     this.getDiameter = function() {
-       return 2 * this.radius
-     }
-     return 100 // return문에 원시값
-   }
+```jsx
+function Circle(radius) {
+  this.radius = radius
+  this.getDiameter = function() {
+    return 2 * this.radius
+  }
+  return 100 // return문에 원시값
+}
 
-   const circle = new Circle(1)
-   console.log(circle) // Circle { radius: 1, getDiameter: f}
-   // 원시 값은 무시되고 this가 반환
-   ```
+const circle = new Circle(1)
+console.log(circle) // Circle { radius: 1, getDiameter: f}
+// 원시 값은 무시되고 this가 반환
+```
 
+<br/>
+<Br/>
 <span class ="hilight-container" style="background: #ebb8c1"><strong class="strong-container">[ " 모던 자바스크립트 Deep Dive " 책을 읽고 정리한 글입니다 ]</strong></span>
+<br/>
