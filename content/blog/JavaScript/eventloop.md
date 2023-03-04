@@ -1,5 +1,5 @@
 ---
-title: '비동기 프로그래밍 - 이벤트 루프, 콜백 함수'
+title: '⏰ 비동기 프로그래밍 1편 - 이벤트 루프'
 date: 2021-07-25 16:21:13
 category: 'JavaScript'
 draft: false

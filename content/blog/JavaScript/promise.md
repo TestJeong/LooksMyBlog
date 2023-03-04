@@ -1,11 +1,11 @@
 ---
-title: '비동기 프로그래밍 - 콜백함수(Callback), Promise(프로미스)'
+title: '⏰ 비동기 프로그래밍 2편 - 콜백함수(Callback), Promise(프로미스)'
 date: 2021-12-25 16:21:13
 category: 'JavaScript'
 draft: false
 ---
 
-1편에서는 싱글쓰레드인 자바스크립트가 어떻게 비동기 처리를 할 수 있는지 알아봤으며 이번에는 비동기 처리 방법 중 **콜백 함수**와 **Promise**에 대해 알아보도록 하겠습니다.
+[1편](https://looksmyblog.netlify.app/JavaScript/eventloop/)에서는 싱글쓰레드인 자바스크립트가 어떻게 비동기 처리를 할 수 있는지 알아봤으며 이번에는 비동기 처리 방법 중 **콜백 함수**와 **Promise**에 대해 알아보도록 하겠습니다.
 
 ## 콜백 함수란?
 
@@ -241,4 +241,6 @@ fetchNumber
 
 then 메소드는 값뿐만 아니라 Promise도 전달할 수 있으며 결과적으로 2초 후 2가 출력됩니다.
 
-<br/>
+<br />
+<br />
+<br />

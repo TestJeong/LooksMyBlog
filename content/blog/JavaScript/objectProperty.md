@@ -1,5 +1,5 @@
 ---
-title: '프로퍼티 어트리뷰트'
+title: '🌈 프로퍼티 어트리뷰트'
 date: 2021-09-29 16:21:13
 category: 'JavaScript'
 draft: false
@@ -47,24 +47,26 @@ console.log(Object.getOwnPropertyDescriptor(person, 'name'))
 
 ### **데이터 프로퍼티와 접근자 프로퍼티**
 
-- 데이터 프로퍼티<br>
-  <span class ="hilight-container" style="background: #fbfea4">키와 값으로 구성된 일반적인 프로퍼티이며 위 코드에 나온 예시가 여기에 속한다</span><br>
+#### **데이터 프로퍼티**
 
-  #### 프로퍼티 어트리뷰트 → 프로퍼티 디스크립터 <br>
+키와 값으로 구성된 일반적인 프로퍼티이며 위 코드에 나온 예시가 여기에 속한다<br>
 
-  `[[Value]] → value` : 프로퍼티 키를 통해 프로퍼티 값에 접근하면 반환되는 값<br>
-  `[[Writable]] → writable` : 프로퍼티 값의 변경 가능 여부를 나타내는 불리언 값 false 이면 value 값 변경 불가능<br>
-  `[[Enumerable]] → enumerable` : 프로퍼티 열거 가능 여부를 나타내는 불리언 값 fasle 인 경우 for... in, Object.keys 메서드 사용 불가<br>
-  `[[Configurable]] → configurable` : 프러퍼티 재정의 가능 여부를 나타내는 불리언 값 fasle 인경우 해당 프로퍼티 삭제, 값 변경이 금지된다<br>
-  <br>
+#### 프로퍼티 어트리뷰트 → 프로퍼티 디스크립터 <br>
 
-- 접근자 프로퍼티<br>
-  <span class ="hilight-container" style="background: #fbfea4">자체적으로 값을 갖지 않고 다른 데이터 프로퍼티의 값을 읽거나 저장할 때 호출되는 접근자 함수로 구성된 프로퍼티.</span>
+**[[Value]] → value** : 프로퍼티 키를 통해 프로퍼티 값에 접근하면 반환되는 값<br>
+**[[Writable]] → writable** : 프로퍼티 값의 변경 가능 여부를 나타내는 불리언 값 false 이면 value 값 변경 불가능<br>
+**[[Enumerable]] → enumerable** : 프로퍼티 열거 가능 여부를 나타내는 불리언 값 fasle 인 경우 for... in, Object.keys 메서드 사용 불가<br>
+**[[Configurable]] → configurable** : 프러퍼티 재정의 가능 여부를 나타내는 불리언 값 fasle 인경우 해당 프로퍼티 삭제, 값 변경이 금지된다<br>
+<br>
 
-  #### 프로퍼티 어트리뷰트 → 프로퍼티 디스크립터
+#### **접근자 프로퍼티** <br>
 
-  `[[Get]] → get` : 접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 읽을 때 호출되는 접근자 함수이며 getter 함수가 호출되고 그 결과가 프로퍼티 값으로 반환된다<br>
-  `[[Set]] → set` : 접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 저장할 때 호출되는 접근자 함수이며 setter 함수가 호출되고 그 결과가 프로퍼티 값으로 저장된다
+자체적으로 값을 갖지 않고 다른 데이터 프로퍼티의 값을 읽거나 저장할 때 호출되는 접근자 함수로 구성된 프로퍼티.
+
+#### 프로퍼티 어트리뷰트 → 프로퍼티 디스크립터
+
+**[[Get]] → get** : 접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 읽을 때 호출되는 접근자 함수이며 getter 함수가 호출되고 그 결과가 프로퍼티 값으로 반환된다<br>
+**[[Set]] → set** : 접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 저장할 때 호출되는 접근자 함수이며 setter 함수가 호출되고 그 결과가 프로퍼티 값으로 저장된다
 
 ```jsx
 const person = {
