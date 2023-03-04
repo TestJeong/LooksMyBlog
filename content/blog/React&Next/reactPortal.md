@@ -9,7 +9,11 @@ React-Portal을 이용하여 모달창을 만들어 보자. 거기다 Framer-mot
 
 > **framer-motion이란?** React에서 애니메이션과 제스처를 쉽게 다룰 수 있도록 해주는 라이브러리.
 
-## Portal 이란?
+<br/>
+
+### **Portal 이란?**
+
+---
 
 React 공식 문서에 따르면, Portal은 **부모 컴포넌트의 DOM 계층 구조 바깥에 있는 DOM 노드로 자식을 렌더링** 하는 최고의 방법이다. 라고 적혀있다. 즉 외부에 존재하는 **DOM 노드**가 **React App DOM 계층 안에 존재하는 것처럼 연결**을 해주는 것을 말한다
 
@@ -17,7 +21,11 @@ React 공식 문서에 따르면, Portal은 **부모 컴포넌트의 DOM 계층 
 
 이처럼 `portal` 과 `next` 은 **같은 관계처럼 보이지만 실제로는 portal 안에서 볼 수 있는 자식 컴포넌트이며 렌더링만** `next` 의 밖에서 이루어지고 있는 것이다. DOM 트리 상에서는 최상위 계층에 있기 때문에 보다 side effect에서 자유로울 수 있고 CSS 상의 방해를 받지 않을 수 있다.
 
-## 사용법 ( TS + Tailwind CSS + Framer-motion )
+<br/>
+
+### **사용법 (TS + Tailwind CSS + Framer-motion)**
+
+---
 
 modal이 렌더링 될 위치 설정해야 한다. `nextjs` 에서는 `_document.tsx` 파일에 새로운 DOM id 값은 **protal** 를 추가합니다.
 

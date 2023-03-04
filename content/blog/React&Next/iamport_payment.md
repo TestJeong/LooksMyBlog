@@ -13,7 +13,7 @@ draft: false
 
 `nextjs`, `typescript`, `react-qeury`, `Tailwind CSS`
 
-## 아임 포트 라이브러리 추가
+## **아임 포트 라이브러리 추가**
 
 기본적으로 next 환경이라 결제 관련 컴포넌트에서 <Head /> 를 이용하여 아임 포트 전용 스크립트를 추가하였습니다.
 
