@@ -20,7 +20,6 @@ GitHubTheme.overrideThemeStyles = () => {
     },
 
     h1: {
-      fontSize: '26px',
       fontWeight: 600,
       lineHeight: 1.2,
       fontFamily: 'nexon-lv1-gothic',
@@ -33,25 +32,21 @@ GitHubTheme.overrideThemeStyles = () => {
       marginTop: '56px',
       marginBottom: '20px',
       fontFamily: 'nexon-lv1-gothic',
-      fontSize: '23px',
       letterSpacing: '0.5px',
     },
 
     h3: {
-      fontSize: '20px',
       fontWeight: 500,
       fontFamily: 'nexon-lv1-gothic',
     },
     // 포스트 안 폰트
     p: {
-      fontSize: '16px',
       lineHeight: 1.7,
       fontWeight: 400,
       fontFamily: 'nexon-lv1-gothic',
     },
 
     ul: {
-      fontSize: '15.5px',
       fontWeight: 400,
       marginBottom: '6px',
       fontFamily: 'nexon-lv1-gothic',
@@ -60,7 +55,6 @@ GitHubTheme.overrideThemeStyles = () => {
     li: {
       fontWeight: 400,
       marginBottom: '2px',
-      fontSize: '15px',
       fontFamily: 'nexon-lv1-gothic',
     },
 

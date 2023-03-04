@@ -3,11 +3,15 @@ body.dark {
   text-shadow: $dark-text-shadow;
   color: $dark-light-font-color;
 
-  @media (max-width: 600px) {
+  @media (min-width: 100px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 550px) {
     font-size: 15px;
   }
 
-  @media only screen and (min-width: 580px) and (max-width: 700px) {
+  @media (min-width: 992px) {
     font-size: 16px;
   }
 
@@ -30,16 +34,11 @@ body.dark {
 
   :not(pre) > code[class*='language-'] {
     text-align: center;
-    //padding: 3px 0.3em 2px 0.3em;
     border-radius: 0.3em;
-    //border: 1px solid #b388ff;
     white-space: normal;
-    //background: $inline-dimmed-color;
     background-color: #282c35;
     font-weight: 500;
-    // color: #b399ff;
     margin-bottom: 10px;
-    //color: $inline-text-color;
   }
 
   .category-container {
@@ -79,7 +78,6 @@ body.dark {
     p {
       font-family: 'nexon-lv1-gothic';
       color: $dark-middle-font-color;
-      font-size: 15px;
       font-weight: 400;
     }
     &:hover {
