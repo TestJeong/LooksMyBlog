@@ -1,5 +1,5 @@
 ---
-title: '⭐️ NextJS에서 React-Portal과 Framer-Motion을 이용하여 멋진 Modal창 만들기!'
+title: 'NextJS에서 React-Portal과 Framer-Motion을 이용하여 멋진 Modal창 만들기!'
 date: 2022-09-04 16:21:13
 category: 'React&Next'
 draft: false
@@ -50,7 +50,11 @@ export default Document
 
 **portal** 은 DOM 트리에 어느 곳에서 나 있을 수 있지만, 일반적인 React의 하위 컴포넌트들처럼 작동하기 때문에 `ContextAPI` 같은 기능은 DOM 트리의 위치에 관계없이 React 트리에 있으므로 다른 컴포넌트들과 동일하게 작동한다.
 
-### 공통으로 사용할 레이아웃 portal-container 컴포넌트 만들기
+<br/>
+
+### **공통으로 사용할 레이아웃 portal-container 컴포넌트 만들기**
+
+---
 
 **createportal** 을 통해 `#portal` **에 자식 컴포넌트를 렌더링**해주는 **Container 컴포넌트**를 만들어보자.
 
@@ -142,17 +146,15 @@ export default ModalPortal
 
 **ModalPortal** 에서 자식 컴포넌트에게 모달을 닫을 수 있는 함수를 넘겨줘야 하는 방법을 찾아야 하는데 이때 `cloneElemet` 를 사용하여 모달을 닫을 수 있는 `setOnModalClose` 을 넘겨주었다. 아래에서 조금 더 자세히 알아보자.
 
-### CloneElement란?
+### [CloneElement란?]
 
 공식 문서 정의를 읽어보자면
 
-- **선택한 요소(element)**를 복사하여 새로운 객체를 반환 해 줄 때, 요소 고유의 key나 ref 이외에 새롭게 정의한 속성(config)을 전달하여 생성할 수 있습니다.
-
-<br/>
+> **선택한 요소(element)**를 복사하여 새로운 객체를 반환 해 줄 때, 요소 고유의 key나 ref 이외에 새롭게 정의한 속성(config)을 전달하여 생성할 수 있습니다.
+> <br/>
 
 쉽게 이야기하자면 지정한 Element를 복사해 반환하며 **children**과 **props**를 같이 넘겨줄 수 있어 필요시에 부모에서의 props를 자식에게 props를 전달해야 하는 경우 사용할 수 있다.
 
-<br/>
 인자로 어떤 것을 받는지 않아보며 각자의 역할을 알아보자.
 
 ```jsx
@@ -166,8 +168,11 @@ React.cloneElement(element, [config], [...children])
 </br>
 
 **ModalPortal** 에서 props로 받는 `setOnModalClose()` 함수를 children element에 새로운 props을 추가하여 사용할 수 있게 된다.
+<br/><br/>
 
-## 최종 완성 코드
+### **최종 완성 코드**
+
+---
 
 useState를 이용하여 **modal**을 열고 닫을 수 있게 state 값을 `boolean` 으로 설정하여 생성한다. 그리고 modal을 open 하는 버튼에 **setOnModal**을 추가하여 **modal**을 컨트롤할 수 있게 만든다. 그리고 modal 안에 보일 내용을 컴포넌트화하여 **ModalPortal** 컴포넌트 안에 자식 컴포넌트로 추가한다.
 
@@ -205,8 +210,14 @@ const ModalTest = ({ setOnModalClose }) => {
 }
 ```
 
-## 완성 결과물
+<br/>
+
+### **완성 결과물**
+
+---
 
 닫기 버튼을 누르거나 배경화면쪽을 눌러도 모달창이 잘 닫기는 것을 확인 할 수 있다.
 
 <p align="center"><img src="./images/modalportal.gif" ></p>
+
+<br/><br/>

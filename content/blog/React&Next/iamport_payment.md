@@ -1,5 +1,5 @@
 ---
-title: '💸 아임포트를 이용하여 결제기능 구현하기'
+title: '아임포트를 이용하여 결제기능 구현하기'
 date: 2022-09-15 16:21:13
 category: 'React&Next'
 draft: false
@@ -12,8 +12,11 @@ draft: false
 아래 예제 코드들은 다음과 같은 개발 환경에서 작성하였습니다.
 
 `nextjs`, `typescript`, `react-qeury`, `Tailwind CSS`
+<br/><br/>
 
-## **아임 포트 라이브러리 추가**
+### **아임 포트 라이브러리 추가**
+
+---
 
 기본적으로 next 환경이라 결제 관련 컴포넌트에서 <Head /> 를 이용하여 아임 포트 전용 스크립트를 추가하였습니다.
 
@@ -34,7 +37,11 @@ const Home = () => {
 export default Home
 ```
 
-## 결제 준비 & 결제 요청하기
+<br/>
+
+### **결제 준비 & 결제 요청하기**
+
+---
 
 결제를 요청, 응답 그리고 준비하는 부분을 **Custom hook**으로 만들어서 관리하였으며, 결제를 요청할 때는 `requestPayment` 함수를, 결제에 관한 응답이 필요할 때는 `responsePayment` 함수를 이용하였습니다.
 
@@ -72,7 +79,7 @@ export default Home
 
 <br/>
 
-### requestPayment() 함수
+### [requestPayment() 함수]
 
 <br/>
 
@@ -171,9 +178,13 @@ kg이니시스는 모바일 웹 환경에서 콜백 함수가 정상적으로 �
 https://myservice.com/payments/complete?imp_uid=결제건을_특정하는_아임포트_번호&merchant_uid=가맹점_고유_주문번호&imp_success=true
 ```
 
-## 결제 정보 전달 & 응답 처리하기
+<br/>
 
-### responsePayment()
+### **결제 정보 전달 & 응답 처리하기**
+
+---
+
+### responsePayment( )
 
 kg이니시스를 통해 결제가 정상적으로 완료되면 `m_redirect_url`에 설정한 주소로 이동한 후 위변조 검사를 위해 리디렉션 url에 있는 주문 번호와 결제 번호를 서버에 전송을 해야 합니다 이때 `responsePayment` 함수를 이용합니다.
 

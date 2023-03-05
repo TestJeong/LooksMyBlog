@@ -1,11 +1,13 @@
 ---
-title: '🌈 프로퍼티 어트리뷰트'
+title: '프로퍼티 어트리뷰트'
 date: 2021-09-29 16:21:13
 category: 'JavaScript'
 draft: false
 ---
 
 ### **내부 슬롯과 내부 메서드**
+
+---
 
 프로퍼티 어트리뷰트를 알아보기 전에 내부 슬롯과 내무 메서드에 대한 이해가 필요하다
 
@@ -18,7 +20,11 @@ o.[[Prototype]] // err!
 o.__proto__ // Object.prototype
 ```
 
+<br/>
+
 ### **프로퍼티 어트리뷰트와 프로퍼티 디스크립터 객체**
+
+---
 
 자바스크립트 엔진은 프로퍼티를 생성할 때 프로퍼티의 상태를 나타내는 프로퍼티 어트리뷰트를 기본값으로 자동 정의를 한다
 
@@ -44,8 +50,11 @@ console.log(Object.getOwnPropertyDescriptor(person, 'name'))
 `Object.getOwnPropertyDescriptor` 메서드를 호출할 때 첫 번째 매개변수에는 객체츼 참조를 전달하고 두 번째 매개변수에는 프로퍼티 키를 문자열로 전달한다 `Object.getOwnPropertyDescriptor` 메서드는 프로퍼티 어트리뷰트 정보를 제공하는 프로퍼티 디스크립터 객체를 반환하며 만약 존재하지 않는 프로퍼티나 상속받은 프로퍼티에 대한것을 요구하면 `undefined` 가 반환된다
 
 `Object.getOwnPropertyDescriptor` 메서드는 하나의 프로퍼티에 대해서만 프로퍼치 디스크립터 객체를 반환하지만 ES8에서 도입된 `Object.getOwnPropertyDescriptors` 메서드는 모든 프로퍼티의 프로퍼티 어트리뷰트 정보를 제공하는 프로퍼티 디스크립터 객체들을 반환한다
+<br/><br/>
 
 ### **데이터 프로퍼티와 접근자 프로퍼티**
+
+---
 
 #### **데이터 프로퍼티**
 
@@ -93,3 +102,4 @@ console.log(person.fullName) // Heegun Lee
 ```
 
 <span class ="hilight-container" style="background: #ebb8c1"><strong class="strong-container">[ " 모던 자바스크립트 Deep Dive " 책을 읽고 정리한 글입니다 ]</strong></span>
+<br/><br/>

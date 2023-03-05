@@ -20,6 +20,7 @@ GitHubTheme.overrideThemeStyles = () => {
     },
 
     h1: {
+      marginTop: '1rem',
       fontSize: '1.6rem',
       fontWeight: 600,
       lineHeight: 1.2,

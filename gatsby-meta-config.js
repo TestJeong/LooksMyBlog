@@ -1,5 +1,5 @@
 module.exports = {
-  title: `개발자로 살아보기`,
+  title: `Rule's`,
   description: `Blog posted about ....`,
   author: `YUN JAE J.`,
   introduction: `듣고, 읽고, 배운 것을 기록하며 성장하는 공간입니다 🍀`,
@@ -11,7 +11,7 @@ module.exports = {
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
   },
-  icon: `content/assets/tent.png`, // Add your favicon
+  icon: `content/assets/circle.png`, // Add your favicon
   keywords: [`blog`],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
