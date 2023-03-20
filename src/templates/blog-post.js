@@ -20,6 +20,7 @@ import 'katex/dist/katex.min.css'
 
 export default ({ data, pageContext, location }) => {
   useEffect(() => {
+    console.log('asdfadf', data)
     ScrollManager.init()
     return () => ScrollManager.destroy()
   }, [])
@@ -78,7 +79,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
       }
     }
   }

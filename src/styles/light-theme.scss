@@ -61,10 +61,26 @@ body.light {
   }
 
   .thumbnail {
+    .container {
+      padding-bottom: 10px;
+    }
+    .category {
+      font-family: 'nexon-lv1-gothic';
+      font-weight: 900;
+      color: $dark-gray;
+      font-size: 13px;
+    }
+    .day {
+      font-family: 'nexon-lv1-gothic';
+      font-weight: 900;
+      color: #444494;
+      font-size: 13px;
+    }
     h3 {
       font-family: 'nexon-lv1-gothic';
       font-weight: 800;
       color: $dark-gray;
+      margin-top: 0;
     }
     p {
       font-family: 'nexon-lv1-gothic';
