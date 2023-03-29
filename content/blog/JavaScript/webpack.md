@@ -1,6 +1,6 @@
 ---
 title: 'Webpack이 해결하는 문제'
-date: 2023-03-20 16:21:13
+date: 2023-02-12 16:21:13
 category: 'JavaScript'
 draft: false
 ---

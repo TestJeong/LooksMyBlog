@@ -11,11 +11,12 @@
   overflow: -moz-scrollbars-none; // Firefox
   z-index: 1;
   padding: 6px 20px;
+  border-radius: 7px;
 
   .item {
     display: inline-block;
     margin: 0.25rem 6px 0.25rem 0;
-    border-radius: 15px;
+    border-radius: 7px;
     white-space: normal;
     box-sizing: border-box;
     cursor: pointer;

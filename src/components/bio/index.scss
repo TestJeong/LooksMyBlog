@@ -5,12 +5,13 @@
 
   .author-description {
     display: flex;
+    align-items: center;
   }
 
   .author-image {
-    margin-top: 12px;
+    margin-top: 10px;
     margin-right: 12px;
-    margin-bottom: 0;
+    margin-bottom: 12px;
     min-width: 72px;
   }
 
