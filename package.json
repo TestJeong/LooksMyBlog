@@ -84,7 +84,7 @@
   },
   "scripts": {
     "post": "gatsby-post-gen",
-    "dev": "gatsby develop -H 192.168.0.58",
+    "dev": "gatsby develop -H 192.168.0.74",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
