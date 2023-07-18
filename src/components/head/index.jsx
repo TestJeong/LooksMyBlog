@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-
 export function Head({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
@@ -18,6 +17,10 @@ export function Head({ description, lang, meta, keywords, title }) {
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
+              {
+                name: 'google-site-verification',
+                content: '4P7FuBdnr7x2ImqyPeRHipN2N6zQPpaQ7A6E7y8jj1s',
+              },
               {
                 name: `description`,
                 content: metaDescription,
