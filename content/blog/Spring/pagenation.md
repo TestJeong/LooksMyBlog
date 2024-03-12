@@ -19,7 +19,7 @@ Limit-Offset 페이지네이션은 데이터를 페이지 단위로 분할하여
 
 ### Offset
 
-시작점을 지정합니다. 즉, 어느 위치에서부터 데이터를 가져올 것인지를 결정하는 것을 말합니다 **OFFSET 10**은 첫 10개의 데이터를 건너뛰고 그 다음 데이터부터 시작하겠다는 의미입니다
+시작점을 지정합니다 즉, 어느 위치에서부터 데이터를 가져올 것인지를 결정하는 것을 말합니다 **OFFSET 10**은 첫 10개의 데이터를 건너뛰고 그 다음 데이터부터 시작하겠다는 의미입니다
 
 ```sql
 SELECT * FROM table LIMIT 10 OFFSET 0 // 첫번째 페이지
@@ -118,25 +118,28 @@ PageRequest page = PageRequest.of(0,10)
 
 ```java
 // Service
- public class ProductService {
- ...
- private final CategoryRepository categoryRepository;
- private final ProductRepository productRepository;
+@Service
+public class ProductService {
 
- // 세부 카테고리 기준 상품리스트 조회
-public ProductListDto findProductBySubCategory(Long subCategoryID, int requestPage) {
+    private final ProductRepository productRepository;
 
-    Page<Products> products = productRepository.findBySubCategoryId(subCategoryID, PageRequest.of(requestPage, 10));
-	...
+    @Autowired
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
+
+    public Page<Product> findProductsBySubCategory(Long subCategoryId, int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return productRepository.findBySubCategoryId(subCategoryId, pageable);
+    }
 }
+
 ```
 
 ```java
 // Repository
-public interface ProductRepository extends JpaRepository<Products, Long> {
-    Page<Products> findBySubCategoryId(Long id, Pageable pageable);
-
-	...
+public interface ProductRepository extends JpaRepository<Product, Long> {
+    Page<Product> findBySubCategoryId(Long subCategoryId, Pageable pageable);
 }
 
 ```
@@ -145,7 +148,7 @@ public interface ProductRepository extends JpaRepository<Products, Long> {
 
 ## Slice
 
-Slice는 다음 페이지의 존재 여부만 알려주므로 전체 데이터 수를 계산하는 카운트 쿼리를 날리지 않기 때문에 성능적으로 Page 보다 더 성능적으로 이점이 있습니다
+Slice는 다음 페이지의 존재 여부만 알려주므로 전체 데이터 수를 계산하는 카운트 쿼리가 필요하지 않기 때문에 성능적으로 Page 보다 더 이점이 있습니다
 
 Page 인터페이스가 Slice 인터페이스를 상속하는 구조이기 때문에 Slice의 기능은 Page의 기능에서 전체 데이터 관련 기능을 뺀 거라고 생각하면 됩니다
 
@@ -178,7 +181,9 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     Slice<Product> findBySubCategoryId(Long subCategoryId, Pageable pageable);
 }
+```
 
+```java
 // ProductService.java
 @Service
 public class ProductService {
@@ -192,19 +197,7 @@ public class ProductService {
     }
 }
 
-// ProductController.java
-@RestController
-public class ProductController {
-
-    @Autowired
-    private ProductService productService;
-
-    @GetMapping("/products/subCategory/{subCategoryId}")
-    public List<Product> getProductsBySubCategory(@PathVariable Long subCategoryId,
-                                                   @RequestParam(defaultValue = "0") int page,
-                                                   @RequestParam(defaultValue = "10") int size) {
-        Slice<Product> productSlice = productService.findProductsBySubCategory(subCategoryId, page, size);
-        return productSlice.getContent();
-    }
-}
 ```
+
+<br />
+<br />
